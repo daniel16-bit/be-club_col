@@ -1,0 +1,478 @@
+/* Estilos generales del cuerpo */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Barra de navegación */
+.navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #696868;
+    padding: 10px;
+}
+
+.logo {
+    width: 150px; /* Ajusta el tamaño del logo según lo necesites */
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
+    display: flex;
+    gap: 20px;
+}
+
+.menu ul li {
+    display: inline;
+}
+
+.menu ul li a {
+    color: rgb(247, 5, 5);
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px; /* Añadido padding para mejorar el tamaño del enlace */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: all 0.3s ease; /* Transición para el hover */
+}
+
+.menu ul li a:hover {
+    color: white; /* Cambio de color al pasar el mouse */
+    background-color: rgb(247, 5, 5); /* Fondo rojo en hover */
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra en hover */
+}
+
+/* Barra de navegación que empieza transparente sobre el carrusel */
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: linear-gradient(to right, #021d00, #000000e2); /* Fondo semitransparente */
+    padding: 20px 0;
+    transition: background-color 0.3s ease; /* Transición suave para el cambio de fondo */
+}
+
+.navbar .logo img {
+    width: 150px;
+}
+
+.navbar .menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar .menu ul li {
+    display: inline;
+}
+
+.navbar .menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.navbar .menu ul li a:hover {
+    color: white;
+    background-color: rgb(21, 247, 5); /* Fondo verde en hover */
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra en hover */
+}
+
+/* Barra de navegación que se fija y cambia de color al hacer scroll */
+.navbar.scrolled {
+    position: fixed;
+    top: 0;
+    background-color: #333; /* Fondo sólido */
+    width: 100%;
+    padding: 10px 0;
+}
+
+/* Carrusel */
+.carousel-item {
+    height: 100vh; /* Aseguramos que las imágenes del carrusel cubran toda la altura de la pantalla */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Estilos generales para las imágenes del carrusel */
+.carousel-inner img {
+    width: 100%;
+}
+
+/* Opcional: Si quieres agregar estilos al contenido de las diapositivas */
+.carousel-caption {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    padding-bottom: 50px; /* Añadimos un poco de espacio en la parte inferior para separar los botones */
+}
+
+/* Separación de los botones con el texto */
+.carousel-caption .uk-margin {
+    margin-bottom: 30px; /* Separa el texto de los botones */
+}
+
+/* Estilos de los botones del carrusel */
+.carousel-caption .uk-button {
+    background-color: rgb(5, 247, 86); /* Rojo para los botones */
+    color: rgb(7, 0, 0);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 20px;
+    transition: all 0.3s ease; /* Transición suave para el hover */
+}
+
+/* Espaciado entre los botones y el texto */
+.carousel-caption p {
+    margin-bottom: 30px; /* Separa los botones de los textos */
+}
+
+.carousel-caption .uk-button:hover {
+    background-color: darkred; /* Cambio de color en el hover */
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra en hover */
+}
+
+/* Agregar transición suave en el carrusel */
+.carousel-inner {
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Información de inscripción */
+.container1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 10%;
+    background-color: #021d00;
+    padding: 20px;
+}
+
+/* Centrando el texto */
+.text-center {
+    text-align: center;
+    width: 100%;
+}
+
+/* Estilos del título */
+.heading {
+    font-family: 'Arial', sans-serif;
+    font-size: 28px;
+    color: #ffffff;
+    font-weight: bold;
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* Contenedor del botón */
+.button-container {
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* Estilos del botón */
+.uk-button-primary {
+    background-color: #2fc452;
+    border-color: #28a745;
+}
+
+.button {
+    font-size: 18px;
+    padding: 15px 30px;
+    background-color: #28a745;
+    border-color: #28a745;
+    color: white;
+    text-transform: uppercase;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+}
+
+/* Espaciado en el ícono */
+.uk-icon-whatsapp {
+    margin-right: 10px;
+}
+
+/*galeria defotos*/
+
+.contenedor-galeria {
+    display: grid;
+    place-items: center;
+    width: 60px;
+}
+
+.galeria {
+    display: flex;
+    
+    gap: 5px;
+    max-width: 100%;
+    padding-left: 50px;
+    margin-top: 50px;
+}
+
+.contenedor-imagen {
+    position: relative;
+    left: 0;
+    width: 300px;
+    border-radius: 5px;
+    height: 350px;
+    overflow: hidden;
+    background-color: #efefef;
+    transition: 0.4s ease-in-out;
+    box-shadow: 0 5px 12px rgb(0, 0, 0, 0.5);
+    flex: 0.25;
+}
+
+.contenedor-imagen img {
+    height: 350px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.contenedor-imagen:hover {
+    flex: 2;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+/* Sección Quiénes somos */
+#about {
+    padding: 60px 0;
+}
+
+.about h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+/* Sección Calendario de eventos */
+#events {
+    padding: 60px 0;
+}
+
+.events h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.events ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.events li {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.events a {
+    font-size: 16px;
+    text-decoration: none;
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: white;
+}
+
+footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+footer h5 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+footer ul li {
+    margin-bottom: 10px;
+}
+
+footer ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+footer ul li a:hover {
+    text-decoration: underline;
+}
+
+footer .embed-responsive {
+    margin-top: 20px;
+}
+
+footer hr {
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+footer p {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+/*quienes somos */
+
+
+#about {
+    background-color: #ffffff;
+    padding: 60px 20px;
+    color: #333;
+}
+
+.about-container {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    background: #f4f9f9;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.about-container h2 {
+    font-size: 36px;
+    color: #2d8659;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.about-container p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+.section-container {
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.section-container img {
+    width: 100%;
+    height: auto;
+    max-width: 600px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.section-container img:hover {
+    transform: scale(1.05);
+}
+
+.section-text {
+    max-width: 800px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+h3 {
+    font-size: 28px;
+    color: #2d8659;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.ul_ {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+ul li {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+ul li strong {
+    color: #2d8659;
+}
+
+footer {
+    background-color: #2d8659;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    font-size: 14px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .about-container {
+        padding: 20px;
+    }
+
+    .about-container h2 {
+        font-size: 30px;
+    }
+
+    .about-container p {
+        font-size: 16px;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+
+    ul li {
+        font-size: 16px;
+    }
+
+    .section-container img {
+        max-width: 100%;
+    }
+}
+
+.grupo{
+    height: 550px;
+    width: 200px;
+}
+
