@@ -1,478 +1,810 @@
-/* Estilos generales del cuerpo */
+:root {
+    --bg-dark: #09120e;
+    --bg-light: #f2f6f3;
+    --text-dark: #101315;
+    --text-soft: #4c585d;
+    --brand: #00b96b;
+    --brand-strong: #01844d;
+    --card-bg: #ffffff;
+    --stroke: #dce8e2;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: sans-serif;
     margin: 0;
     padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text-dark);
+    background: var(--bg-light);
 }
 
-/* Barra de navegación */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+section,
+footer {
+    scroll-margin-top: 92px;
+}
+
 .navbar {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #696868;
-    padding: 10px;
-}
-
-.logo {
-    width: 150px; /* Ajusta el tamaño del logo según lo necesites */
-}
-
-.menu ul {
-    list-style-type: none;
-    padding: 0;
-    margin-top: 10px;
-    display: flex;
-    gap: 20px;
-}
-
-.menu ul li {
-    display: inline;
-}
-
-.menu ul li a {
-    color: rgb(247, 5, 5);
-    text-decoration: none;
-    font-size: 18px;
-    padding: 10px 15px; /* Añadido padding para mejorar el tamaño del enlace */
-    border-radius: 5px; /* Bordes redondeados */
-    transition: all 0.3s ease; /* Transición para el hover */
-}
-
-.menu ul li a:hover {
-    color: white; /* Cambio de color al pasar el mouse */
-    background-color: rgb(247, 5, 5); /* Fondo rojo en hover */
-    text-decoration: none;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra en hover */
-}
-
-/* Barra de navegación que empieza transparente sobre el carrusel */
-.navbar {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 1000;
-    background: linear-gradient(to right, #021d00, #000000e2); /* Fondo semitransparente */
-    padding: 20px 0;
-    transition: background-color 0.3s ease; /* Transición suave para el cambio de fondo */
-}
-
-.navbar .logo img {
-    width: 150px;
-}
-
-.navbar .menu ul {
-    list-style-type: none;
-    padding: 0;
-    margin-top: 10px;
     display: flex;
-    gap: 20px;
-}
-
-.navbar .menu ul li {
-    display: inline;
-}
-
-.navbar .menu ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 15px;
-    padding: 10px 15px;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-}
-
-.navbar .menu ul li a:hover {
-    color: white;
-    background-color: rgb(21, 247, 5); /* Fondo verde en hover */
-    text-decoration: none;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra en hover */
-}
-
-/* Barra de navegación que se fija y cambia de color al hacer scroll */
-.navbar.scrolled {
-    position: fixed;
-    top: 0;
-    background-color: #333; /* Fondo sólido */
-    width: 100%;
-    padding: 10px 0;
-}
-
-/* Carrusel */
-.carousel-item {
-    height: 100vh; /* Aseguramos que las imágenes del carrusel cubran toda la altura de la pantalla */
-    background-size: cover;
-    background-position: center;
-}
-
-/* Estilos generales para las imágenes del carrusel */
-.carousel-inner img {
-    width: 100%;
-}
-
-/* Opcional: Si quieres agregar estilos al contenido de las diapositivas */
-.carousel-caption {
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-    padding-bottom: 50px; /* Añadimos un poco de espacio en la parte inferior para separar los botones */
-}
-
-/* Separación de los botones con el texto */
-.carousel-caption .uk-margin {
-    margin-bottom: 30px; /* Separa el texto de los botones */
-}
-
-/* Estilos de los botones del carrusel */
-.carousel-caption .uk-button {
-    background-color: rgb(5, 247, 86); /* Rojo para los botones */
-    color: rgb(7, 0, 0);
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 20px;
-    transition: all 0.3s ease; /* Transición suave para el hover */
-}
-
-/* Espaciado entre los botones y el texto */
-.carousel-caption p {
-    margin-bottom: 30px; /* Separa los botones de los textos */
-}
-
-.carousel-caption .uk-button:hover {
-    background-color: darkred; /* Cambio de color en el hover */
-    color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra en hover */
-}
-
-/* Agregar transición suave en el carrusel */
-.carousel-inner {
-    transition: transform 0.3s ease-in-out;
-}
-
-/* Información de inscripción */
-.container1 {
-    display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    gap: 0.6rem;
+    padding: 0.85rem 1rem;
+    background: linear-gradient(180deg, rgba(3, 16, 10, 0.95), rgba(3, 16, 10, 0.6));
+    backdrop-filter: blur(4px);
+    transition: background-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.navbar.scrolled {
+    background: rgba(8, 20, 14, 0.97);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+.logo img {
+    width: 145px;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
     flex-wrap: wrap;
-    min-height: 10%;
-    background-color: #021d00;
-    padding: 20px;
-}
-
-/* Centrando el texto */
-.text-center {
-    text-align: center;
-    width: 100%;
-}
-
-/* Estilos del título */
-.heading {
-    font-family: 'Arial', sans-serif;
-    font-size: 28px;
-    color: #ffffff;
-    font-weight: bold;
-    line-height: 1.4;
+    justify-content: center;
+    gap: 0.6rem;
     margin: 0;
+    padding: 0;
 }
 
-/* Contenedor del botón */
-.button-container {
-    text-align: center;
-    width: 100%;
-    margin-top: 20px;
-}
-
-/* Estilos del botón */
-.uk-button-primary {
-    background-color: #2fc452;
-    border-color: #28a745;
-}
-
-.button {
-    font-size: 18px;
-    padding: 15px 30px;
-    background-color: #28a745;
-    border-color: #28a745;
-    color: white;
+.menu a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 700;
     text-transform: uppercase;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    text-align: center;
+    letter-spacing: 0.05em;
+    font-size: 0.78rem;
+    padding: 0.55rem 0.8rem;
+    border-radius: 999px;
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.menu a:hover,
+.menu a:focus-visible {
+    background: var(--brand);
+    color: #03120b;
+}
+
+.hero-section {
+    margin-top: 92px;
+}
+
+.carousel-item {
+    position: relative;
+    min-height: calc(100vh - 92px);
+    max-height: 860px;
+}
+
+.carousel-item::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.58) 100%);
+    z-index: 1;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: calc(100vh - 92px);
+    min-height: 420px;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    z-index: 2;
+    bottom: 4rem;
+}
+
+.caption-box {
+    display: inline-block;
+    max-width: 760px;
+    background: rgba(8, 18, 13, 0.55);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 14px;
+    backdrop-filter: blur(3px);
+    padding: 1.25rem 1.5rem;
+}
+
+.caption-box h1,
+.caption-box h2,
+.section-header h2,
+.feature-card h3,
+.coach-card h3,
+.store-card h3,
+.about h2,
+.events h2,
+.accordion-button {
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 0.03em;
+}
+
+.caption-box h1,
+.caption-box h2 {
+    color: #ffffff;
+    font-size: clamp(2rem, 3.8vw, 3.25rem);
+    margin-bottom: 0.35rem;
+}
+
+.caption-box p {
+    color: #edf4ef;
+    font-size: clamp(0.95rem, 1.5vw, 1.15rem);
+    margin-bottom: 1rem;
+}
+
+.btn-main {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    background: var(--brand);
+    color: #042012;
+    font-weight: 800;
+    padding: 0.72rem 1.25rem;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    transition: transform 0.22s ease, background-color 0.22s ease, color 0.22s ease;
+}
+
+.btn-main:hover,
+.btn-main:focus-visible {
+    transform: translateY(-1px);
+    background: var(--brand-strong);
+    color: #e9fff3;
+}
+
+.cta-strip {
+    background: linear-gradient(110deg, #061910 0%, #0e2a1a 45%, #1a3f28 100%);
+    color: #ffffff;
+    padding: 2rem 1rem;
+}
+
+.cta-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.cta-content h2 {
+    margin: 0;
+    font-size: clamp(1.3rem, 3vw, 2rem);
+}
+
+.section-block {
+    padding: 4rem 0;
+}
+
+.light-section {
+    background: #ffffff;
+}
+
+.section-header {
+    margin-bottom: 1.7rem;
+}
+
+.section-tag {
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.11em;
+    color: var(--brand-strong);
+    font-size: 0.82rem;
+    font-weight: 800;
+}
+
+.section-header h2 {
+    margin: 0.35rem 0 0;
+    font-size: clamp(1.8rem, 4vw, 2.7rem);
+}
+
+.feature-card,
+.coach-card,
+.store-card {
+    background: var(--card-bg);
+    border: 1px solid var(--stroke);
+    border-radius: 14px;
+    padding: 1.2rem;
+    box-shadow: 0 8px 24px rgba(15, 31, 23, 0.07);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.feature-card:hover,
+.coach-card:hover,
+.store-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 28px rgba(15, 31, 23, 0.12);
+}
+
+.feature-card i {
+    color: var(--brand-strong);
+    font-size: 1.45rem;
+    margin-bottom: 0.65rem;
+}
+
+.feature-card h3,
+.coach-card h3,
+.store-card h3 {
+    font-size: 1.5rem;
+    margin: 0 0 0.45rem;
+}
+
+.feature-card p,
+.coach-card p,
+.store-card p,
+.about p,
+.events p,
+.events li,
+.accordion-body,
+.site-footer p {
+    color: var(--text-soft);
+    margin-bottom: 0.8rem;
+}
+
+.feature-card a,
+.store-card a {
+    color: var(--brand-strong);
+    font-weight: 700;
     text-decoration: none;
 }
-
-.button:hover {
-    background-color: #218838;
-    border-color: #1e7e34;
-}
-
-/* Espaciado en el ícono */
-.uk-icon-whatsapp {
-    margin-right: 10px;
-}
-
-/*galeria defotos*/
 
 .contenedor-galeria {
-    display: grid;
-    place-items: center;
-    width: 60px;
+    display: flex;
+    justify-content: center;
 }
 
 .galeria {
     display: flex;
-    
-    gap: 5px;
-    max-width: 100%;
-    padding-left: 50px;
-    margin-top: 50px;
+    gap: 0.6rem;
+    width: 100%;
+    align-items: stretch; /* asegura misma altura */
 }
 
 .contenedor-imagen {
-    position: relative;
-    left: 0;
-    width: 300px;
-    border-radius: 5px;
-    height: 350px;
+    flex: 1;
+    height: 360px;
     overflow: hidden;
-    background-color: #efefef;
-    transition: 0.4s ease-in-out;
-    box-shadow: 0 5px 12px rgb(0, 0, 0, 0.5);
-    flex: 0.25;
+    border-radius: 12px;
+    position: relative;
+}
+
+.galeria {
+    display: flex;
+    gap: 0.4rem;
+    width: 100%;
+}
+
+.contenedor-imagen figure {
+    width: 100%;
+    height: 100%;
+    margin: 0; /* elimina espacio extra */
 }
 
 .contenedor-imagen img {
-    height: 350px;
     width: 100%;
+    height: 100%;
+    object-fit: cover; /* llena el cuadro sin deformarse */
+    object-position: center; /* centra la imagen */
+}
+
+.contenedor-imagen {
+    flex: 1;
+    height: 360px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.2);
+    transition: flex 0.38s ease;
+}
+
+.contenedor-imagen img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
 .contenedor-imagen:hover {
     flex: 2;
-    cursor: pointer;
-    border-radius: 8px;
 }
 
-/* Sección Quiénes somos */
-#about {
-    padding: 60px 0;
-}
-
-.about h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
-}
-
-.about p {
-    font-size: 18px;
-    line-height: 1.5;
-}
-
-/* Sección Calendario de eventos */
-#events {
-    padding: 60px 0;
-}
-
+.about h2,
 .events h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
+    font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+}
+
+.coach-card img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 9px;
+    margin-bottom: 0.8rem;
 }
 
 .events ul {
-    list-style-type: none;
-    padding: 0;
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 1rem;
 }
 
 .events li {
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-.events a {
-    font-size: 16px;
-    text-decoration: none;
-}
-
-/* Footer */
-footer {
-    background-color: #222;
-    color: white;
-}
-
-footer .container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-footer h5 {
-    font-size: 18px;
-    margin-bottom: 15px;
-}
-
-footer ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-footer ul li {
-    margin-bottom: 10px;
-}
-
-footer ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-}
-
-footer ul li a:hover {
-    text-decoration: underline;
-}
-
-footer .embed-responsive {
-    margin-top: 20px;
-}
-
-footer hr {
-    border-color: rgba(255, 255, 255, 0.3);
-}
-
-footer p {
-    font-size: 14px;
-    text-align: center;
-    margin-top: 20px;
-}
-
-
-/*quienes somos */
-
-
-#about {
-    background-color: #ffffff;
-    padding: 60px 20px;
-    color: #333;
-}
-
-.about-container {
-    max-width: 900px;
-    margin: 0 auto;
-    text-align: center;
-    background: #f4f9f9;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-.about-container h2 {
-    font-size: 36px;
-    color: #2d8659;
-    margin-bottom: 30px;
-    font-weight: 700;
-}
-
-.about-container p {
-    font-size: 18px;
-    line-height: 1.7;
-    color: #555;
-    margin-bottom: 25px;
-}
-
-.section-container {
-    margin-bottom: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.section-container img {
-    width: 100%;
-    height: auto;
-    max-width: 600px;
-    border-radius: 8px;
-    margin-bottom: 20px;
-    transition: transform 0.3s ease;
-}
-
-.section-container img:hover {
-    transform: scale(1.05);
-}
-
-.section-text {
-    max-width: 800px;
-    margin-top: 20px;
-    text-align: center;
-}
-
-h3 {
-    font-size: 28px;
-    color: #2d8659;
-    margin-bottom: 15px;
-    font-weight: 600;
-}
-
-.ul_ {
-    list-style: none;
-    padding: 0;
-    text-align: left;
-    max-width: 650px;
-    margin: 0 auto;
-}
-
-ul li {
-    font-size: 18px;
-    margin-bottom: 10px;
-    color: #555;
-}
-
-ul li strong {
-    color: #2d8659;
-}
-
-footer {
-    background-color: #2d8659;
-    color: white;
-    text-align: center;
-    padding: 10px;
+    padding-left: 1.5rem;
     position: relative;
-    width: 100%;
-    bottom: 0;
-    font-size: 14px;
 }
 
-footer p {
+.events li::before {
+    content: "";
+    width: 0.55rem;
+    height: 0.55rem;
+    border-radius: 50%;
+    background: var(--brand);
+    position: absolute;
+    left: 0;
+    top: 0.45rem;
+}
+
+.store-card .price {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: #102b1b;
+}
+
+.store-card.featured {
+    border: 2px solid var(--brand);
+}
+
+.accordion-item {
+    border: 1px solid var(--stroke);
+    margin-bottom: 0.7rem;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.accordion-button {
+    font-size: 1.35rem;
+    background: #ffffff;
+    color: #133120;
+}
+
+.accordion-button:not(.collapsed) {
+    background: #e8f8ef;
+    color: #0f2f1d;
+}
+
+.accordion-button:focus {
+    box-shadow: 0 0 0 0.2rem rgba(0, 185, 107, 0.18);
+}
+
+.site-footer {
+    background: #0a1610;
+    color: #ecfff4;
+}
+
+.site-footer h5 {
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 0.04em;
+    font-size: 1.7rem;
+}
+
+.site-footer p,
+.site-footer a {
+    color: #d2dfd8;
+}
+
+.site-footer a {
+    text-decoration: none;
+}
+
+.site-footer a:hover {
+    color: #ffffff;
+}
+
+.social-list li {
+    margin-bottom: 0.45rem;
+}
+
+.social-list i {
+    width: 1.1rem;
+    margin-right: 0.4rem;
+}
+
+.map-frame {
+    margin-top: 0.8rem;
+    border: 1px solid #284137;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.site-footer hr {
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.footer-copy p {
     margin: 0;
 }
 
-/* Estilos responsivos */
-@media (max-width: 768px) {
-    .about-container {
-        padding: 20px;
+@media (max-width: 991.98px) {
+    .navbar {
+        padding: 0.75rem;
     }
 
-    .about-container h2 {
-        font-size: 30px;
+    .menu a {
+        font-size: 0.72rem;
+        padding: 0.45rem 0.7rem;
     }
 
-    .about-container p {
-        font-size: 16px;
+    .carousel-caption {
+        bottom: 2.5rem;
     }
 
-    h3 {
-        font-size: 24px;
+    .caption-box {
+        padding: 0.95rem 1.05rem;
     }
 
-    ul li {
-        font-size: 16px;
-    }
-
-    .section-container img {
-        max-width: 100%;
+    .contenedor-imagen,
+    .contenedor-imagen img {
+        height: 280px;
     }
 }
 
-.grupo{
-    height: 550px;
-    width: 200px;
+@media (max-width: 767.98px) {
+    .hero-section {
+        margin-top: 110px;
+    }
+
+    .carousel-item,
+    .carousel-item img {
+        min-height: 420px;
+        height: 420px;
+    }
+
+    .carousel-caption {
+        display: block !important;
+    }
+
+    .caption-box {
+        max-width: 90%;
+    }
+
+    .cta-content {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .galeria {
+        flex-direction: column;
+    }
+
+    .contenedor-imagen,
+    .contenedor-imagen:hover {
+        flex: initial;
+        height: 220px;
+    }
+
+    .section-block {
+        padding: 3rem 0;
+    }
 }
 
+
+
+
+/* ============================= */
+/* HERO IMPACTO PROFESIONAL */
+/* ============================= */
+
+.hero-section {
+
+position: relative;
+
+overflow: hidden;
+
+}
+
+/* overlay extra profesional */
+
+.carousel-item::after {
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+background:
+
+linear-gradient(
+
+180deg,
+
+rgba(0,0,0,0.25) 0%,
+
+rgba(0,0,0,0.55) 50%,
+
+rgba(0,0,0,0.85) 100%
+
+);
+
+z-index:1;
+
+}
+
+
+/* caption animacion */
+
+.carousel-caption {
+
+z-index:3;
+
+animation: heroFade 1.2s ease;
+
+}
+
+
+/* caja hero mejorada */
+
+.caption-box {
+
+box-shadow:
+
+0 20px 60px rgba(0,0,0,0.45),
+
+0 0 0 1px rgba(255,255,255,0.05);
+
+}
+
+
+/* titulo hero impacto */
+
+.caption-box h1 {
+
+font-size: clamp(2.8rem, 6vw, 5rem);
+
+letter-spacing: 0.08em;
+
+text-shadow:
+
+0 4px 20px rgba(0,0,0,0.6);
+
+}
+
+
+/* texto hero */
+
+.caption-box p {
+
+font-size: clamp(1.1rem, 2vw, 1.4rem);
+
+opacity: 0.95;
+
+}
+
+
+/* boton hero pro */
+
+.btn-main {
+
+box-shadow:
+
+0 6px 18px rgba(0,185,107,0.35);
+
+}
+
+.btn-main:hover {
+
+box-shadow:
+
+0 10px 28px rgba(0,185,107,0.55);
+
+}
+
+
+/* ============================= */
+/* NAVBAR PROFESIONAL */
+/* ============================= */
+
+.navbar {
+
+transition: all 0.3s ease;
+
+}
+
+.navbar.scrolled {
+
+background: rgba(4,14,9,0.98);
+
+box-shadow:
+
+0 6px 24px rgba(0,0,0,0.4);
+
+}
+
+
+/* ============================= */
+/* CTA IMPACTO */
+/* ============================= */
+
+.cta-strip {
+
+background:
+
+linear-gradient(
+
+90deg,
+
+#03150d,
+
+#083a22,
+
+#03150d
+
+);
+
+position: relative;
+
+overflow:hidden;
+
+}
+
+.cta-strip::before {
+
+content:"";
+
+position:absolute;
+
+width:400px;
+
+height:400px;
+
+background: radial-gradient(
+
+circle,
+
+rgba(0,185,107,0.35),
+
+transparent
+
+);
+
+top:-150px;
+
+left:-100px;
+
+}
+
+
+/* ============================= */
+/* CARDS PROFESIONALES */
+/* ============================= */
+
+.feature-card {
+
+transition: all 0.3s ease;
+
+}
+
+.feature-card:hover {
+
+transform: translateY(-8px) scale(1.02);
+
+box-shadow:
+
+0 20px 50px rgba(0,0,0,0.15);
+
+}
+
+
+/* ============================= */
+/* GALERIA EFECTO PRO */
+/* ============================= */
+
+.contenedor-imagen {
+
+transition: all 0.4s ease;
+
+}
+
+.contenedor-imagen:hover {
+
+transform: scale(1.03);
+
+z-index:2;
+
+}
+
+
+/* ============================= */
+/* FOOTER PROFESIONAL */
+/* ============================= */
+
+.site-footer {
+
+background:
+
+linear-gradient(
+
+180deg,
+
+#08140e,
+
+#020805
+
+);
+
+}
+
+
+/* ============================= */
+/* ANIMACIONES */
+/* ============================= */
+
+@keyframes heroFade {
+
+from {
+
+opacity:0;
+
+transform: translateY(30px);
+
+}
+
+to {
+
+opacity:1;
+
+transform: translateY(0);
+
+}
+
+}
+
+
+/* ============================= */
+/* EFECTO ENTRADA SUAVE */
+/* ============================= */
+
+.section-block {
+
+animation: sectionFade 1s ease;
+
+}
+
+@keyframes sectionFade {
+
+from {
+
+opacity:0;
+
+transform: translateY(40px);
+
+}
+
+to {
+
+opacity:1;
+
+transform: translateY(0);
+
+}
+
+}

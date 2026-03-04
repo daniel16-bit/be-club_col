@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Contacto - Club Deportivo</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Estilos mínimos para el formulario */
+        .container { max-width:700px; margin:24px auto; padding:16px; }
+        label { display:block; margin-top:8px; }
+        input, textarea, select { width:100%; padding:8px; margin-top:4px; }
+        button { margin-top:12px; padding:10px 16px; }
+        .message { margin-top:12px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Formulario de Contacto</h1>
+    <form id="contactForm" action="#" method="post" novalidate>
+        <label for="nombre">Nombre Completo:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="email">Correo Electrónico:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="telefono">Teléfono de Contacto (opcional):</label>
+        <input type="text" id="telefono" name="telefono">
+
+        <label for="asunto">Asunto:</label>
+        <input type="text" id="asunto" name="asunto" required>
+
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+        <label for="como">¿Cómo te enteraste de nuestro club?</label>
+        <select id="como" name="como" required>
+            <option value="">Selecciona una opción</option>
+            <option value="redes_sociales">Redes sociales</option>
+            <option value="recomendacion">Recomendación</option>
+            <option value="publicidad">Publicidad</option>
+            <option value="otro">Otro</option>
+        </select>
+
+        <label for="area">¿Qué área te interesa más?</label>
+        <select id="area" name="area" required>
+            <option value="">Selecciona un área</option>
+            <option value="inscripcion">Inscripción</option>
+            <option value="informacion">Información</option>
+            <option value="voluntariado">Voluntariado</option>
+            <option value="otro">Otro</option>
+        </select>
+
+        <label>
+            <input type="checkbox" id="terminos" name="terminos" required> Acepto los términos y condiciones
+        </label>
+
+        <button type="submit">Enviar</button>
+    </form>
+
+    <div id="result" class="message" aria-live="polite"></div>
+</div>
+
+<script>
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+        const form = e.target;
+        const data = new FormData(form);
+
+        // Validación sencilla
+        const nombre = data.get('nombre').trim();
+        const email = data.get('email').trim();
+        const asunto = data.get('asunto').trim();
+        const mensaje = data.get('mensaje').trim();
+        const terminos = form.querySelector('#terminos').checked;
+
+        if (!nombre || !email || !asunto || !mensaje || !terminos) {
+            document.getElementById('result').innerHTML = '<p style="color:red">Por favor completa todos los campos obligatorios y acepta los términos.</p>';
+            return;
+        }
+
+        // No hay envío al servidor: simulamos el resultado
+        const safe = (s) => s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+
+        let html = '<div style="border:1px solid #dcdcdc; padding:12px; background:#f6f6f6;">'
+            + '<p style="color:green; font-weight:bold;">✔ El formulario se procesó correctamente (envío deshabilitado).</p>'
+            + '<p><strong>Nombre:</strong> ' + safe(nombre) + '</p>'
+            + '<p><strong>Correo:</strong> ' + safe(email) + '</p>'
+            + '<p><strong>Asunto:</strong> ' + safe(asunto) + '</p>'
+            + '<p><strong>Mensaje:</strong><br/>' + safe(mensaje).replace(/\n/g,'<br/>') + '</p>'
+            + '</div>';
+
+        document.getElementById('result').innerHTML = html;
+        form.reset();
+    });
+</script>
+
+</body>
+</html>

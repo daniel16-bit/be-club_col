@@ -1,0 +1,291 @@
+/* ============================= */
+/* HERO VIDEO / SUPER HERO */
+/* ============================= */
+
+.hero-section {
+
+position: relative;
+
+height: 100vh;
+
+overflow: hidden;
+
+}
+
+.hero-section::before {
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+background:
+
+linear-gradient(
+
+180deg,
+
+rgba(0,0,0,0.3),
+
+rgba(0,0,0,0.85)
+
+);
+
+z-index:1;
+
+}
+
+/* imagen hero elite */
+
+.carousel-item img {
+
+transform: scale(1.08);
+
+animation: heroZoom 12s ease forwards;
+
+}
+
+@keyframes heroZoom {
+
+from {transform: scale(1.15);}
+to {transform: scale(1);}
+
+}
+
+
+/* texto hero elite */
+
+.caption-box {
+
+animation: heroText 1.4s ease;
+
+}
+
+@keyframes heroText {
+
+from {
+
+opacity:0;
+
+transform: translateY(60px);
+
+}
+
+to {
+
+opacity:1;
+
+transform: translateY(0);
+
+}
+
+}
+
+.caption-box h1 {
+
+font-size: clamp(3rem, 7vw, 6rem);
+
+letter-spacing: 0.12em;
+
+text-shadow:
+
+0 0 20px rgba(0,185,107,0.35),
+
+0 0 60px rgba(0,0,0,0.8);
+
+}
+
+
+/* ============================= */
+/* NAVBAR ELITE */
+/* ============================= */
+
+.navbar {
+
+transition: all 0.35s ease;
+
+}
+
+.navbar.scrolled {
+
+background: rgba(3,12,8,0.98);
+
+box-shadow:
+
+0 10px 40px rgba(0,0,0,0.5);
+
+}
+
+
+/* ============================= */
+/* BOTONES ELITE */
+/* ============================= */
+
+.btn-main {
+
+position: relative;
+
+overflow:hidden;
+
+}
+
+.btn-main::before {
+
+content:"";
+
+position:absolute;
+
+width:120%;
+
+height:100%;
+
+background: linear-gradient(
+
+120deg,
+
+transparent,
+
+rgba(255,255,255,0.3),
+
+transparent
+
+);
+
+left:-120%;
+
+transition: 0.6s;
+
+}
+
+.btn-main:hover::before {
+
+left:120%;
+
+}
+
+
+/* ============================= */
+/* CARDS ELITE */
+/* ============================= */
+
+.feature-card {
+
+transition: all 0.4s ease;
+
+}
+
+.feature-card:hover {
+
+transform:
+
+translateY(-12px)
+
+scale(1.04);
+
+box-shadow:
+
+0 25px 60px rgba(0,0,0,0.25);
+
+}
+
+
+/* ============================= */
+/* GALERIA ELITE */
+/* ============================= */
+
+.contenedor-imagen {
+
+transition: all 0.5s ease;
+
+}
+
+.contenedor-imagen:hover {
+
+transform: scale(1.06);
+
+z-index:5;
+
+box-shadow:
+
+0 30px 80px rgba(0,0,0,0.45);
+
+}
+
+
+/* ============================= */
+/* CTA ELITE */
+/* ============================= */
+
+.cta-strip {
+
+background:
+
+linear-gradient(
+
+90deg,
+
+#02110a,
+
+#00b96b,
+
+#02110a
+
+);
+
+background-size: 200%;
+
+animation: gradientMove 6s infinite linear;
+
+}
+
+@keyframes gradientMove {
+
+0% {background-position: 0%;}
+100% {background-position: 200%;}
+
+}
+
+
+/* ============================= */
+/* SCROLL ANIMATION */
+/* ============================= */
+
+.reveal {
+
+opacity:0;
+
+transform: translateY(40px);
+
+transition: all 1s ease;
+
+}
+
+.reveal.active {
+
+opacity:1;
+
+transform: translateY(0);
+
+}
+
+
+/* ============================= */
+/* FOOTER ELITE */
+/* ============================= */
+
+.site-footer {
+
+background:
+
+linear-gradient(
+
+180deg,
+
+#000,
+
+#02110a
+
+);
+
+}

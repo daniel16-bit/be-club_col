@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Equipo | Be Club</title>
+
+<meta name="description" content="Equipo profesional de entrenadores de running, atletismo y ciclismo en Be Club.">
+
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<link rel="stylesheet" href="style1.css">
+
+</head>
+
+
+<body>
+
+
+
+<!-- NAVBAR -->
+<header class="navbar">
+
+<div class="logo">
+
+<a href="index.html">
+
+<img src="img/Logo_Final_BeClub-03.png" alt="Be Club">
+
+</a>
+
+</div>
+
+
+<nav class="menu">
+
+<ul>
+
+<li><a href="index.html">Inicio</a></li>
+<li><a href="info_club.html">El Club</a></li>
+<li><a href="servicios.html">Programas</a></li>
+<li><a href="instructores.html">Equipo</a></li>
+<li><a href="galeria.html">Galería</a></li>
+<li><a href="planes.html">Planes</a></li>
+<li><a href="eventos.html">Eventos</a></li>
+<li><a href="formularios/formulario.html">Contacto</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+
+
+<!-- HERO -->
+<section class="hero-section">
+
+<div class="container text-center">
+
+<h1 style="margin-top:140px;">Nuestro Equipo Profesional</h1>
+
+<p>
+Entrenadores especializados en running, atletismo y ciclismo.
+</p>
+
+</div>
+
+</section>
+
+
+
+<!-- ENTRENADORES -->
+<section class="section-block">
+
+<div class="container">
+
+
+<div class="section-header">
+
+<p class="section-tag">Be Club</p>
+
+<h2>Entrenadores</h2>
+
+</div>
+
+
+
+<div class="row g-4">
+
+
+<!-- ENTRENADOR 1 -->
+<div class="col-md-4">
+
+<div class="coach-card h-100">
+
+<img src="img/1.jpeg" alt="Daniel Camargo">
+
+<h3>Daniel Camargo</h3>
+
+<p><strong>Especialidad:</strong> Running y Atletismo</p>
+
+<p>
+Entrenador especializado en pruebas de fondo, desarrollo de resistencia y preparación física general.
+</p>
+
+<p>
+Experiencia en entrenamiento deportivo y planificación estructurada.
+</p>
+
+</div>
+
+</div>
+
+
+
+<!-- ENTRENADOR 2 -->
+<div class="col-md-4">
+
+<div class="coach-card h-100">
+
+<img src="img/7.jpg" alt="Laura Vargas">
+
+<h3>Laura Vargas</h3>
+
+<p><strong>Especialidad:</strong> Técnica y Velocidad</p>
+
+<p>
+Especialista en técnica de carrera, prevención de lesiones y desarrollo de velocidad.
+</p>
+
+<p>
+Trabajo con atletas juveniles y adultos.
+</p>
+
+</div>
+
+</div>
+
+
+
+<!-- ENTRENADOR 3 -->
+<div class="col-md-4">
+
+<div class="coach-card h-100">
+
+<img src="img/IMG_3329.jpg" alt="Sebastian Ruiz">
+
+<h3>Sebastian Ruiz</h3>
+
+<p><strong>Especialidad:</strong> Alto Rendimiento</p>
+
+<p>
+Entrenador enfocado en preparación competitiva para running y atletismo.
+</p>
+
+<p>
+Planificación avanzada para competencias.
+</p>
+
+</div>
+
+</div>
+
+
+
+<!-- ENTRENADOR CICLISMO -->
+<div class="col-md-6">
+
+<div class="coach-card h-100">
+
+<img src="img/ciclismo.jpg" alt="Entrenador de ciclismo">
+
+<h3>Entrenador de Ciclismo</h3>
+
+<p><strong>Especialidad:</strong> Ciclismo de Ruta</p>
+
+<p>
+Entrenamiento enfocado en resistencia, potencia y preparación competitiva.
+</p>
+
+<p>
+Planificación estructurada para ciclistas.
+</p>
+
+</div>
+
+</div>
+
+
+
+<!-- PREPARADOR FISICO -->
+<div class="col-md-6">
+
+<div class="coach-card h-100">
+
+<img src="img/preparador.jpg" alt="Preparador fisico">
+
+<h3>Preparador Físico</h3>
+
+<p><strong>Especialidad:</strong> Preparación Física</p>
+
+<p>
+Desarrollo de fuerza, prevención de lesiones y mejora del rendimiento deportivo.
+</p>
+
+<p>
+Trabajo complementario para atletas y ciclistas.
+</p>
+
+</div>
+
+</div>
+
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- CTA -->
+<section class="cta-strip">
+
+<div class="container cta-content">
+
+<h2>Entrena con profesionales certificados</h2>
+
+<a class="btn-main" href="formularios/formulario.html">
+
+<i class="fa-solid fa-user-plus"></i>
+Unirme al equipo
+
+</a>
+
+</div>
+
+</section>
+
+
+
+<!-- FOOTER -->
+<footer class="site-footer py-4">
+
+<div class="container text-center">
+
+<h5>Be Club</h5>
+
+<p>Centro de Running, Atletismo y Ciclismo</p>
+
+<p>© <span id="year"></span> Be Club</p>
+
+</div>
+
+</footer>
+
+
+
+<script>
+
+document.getElementById("year").textContent = new Date().getFullYear();
+
+const navbar = document.querySelector(".navbar");
+
+window.addEventListener("scroll", function(){
+
+navbar.classList.toggle("scrolled", window.scrollY > 20);
+
+});
+
+</script>
+
+
+
+</body>
+</html>
