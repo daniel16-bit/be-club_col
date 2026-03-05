@@ -29,6 +29,8 @@
 <!-- NAVBAR -->
 <header class="navbar">
 
+<div class="nav-top">
+
 <div class="logo">
 
 <a href="index.html">
@@ -39,8 +41,15 @@
 
 </div>
 
+<button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="site-menu">
+<span></span>
+<span></span>
+<span></span>
+</button>
 
-<nav class="menu">
+</div>
+
+<nav class="menu" id="site-menu">
 
 <ul>
 
@@ -48,7 +57,7 @@
 <li><a href="info_club.html">El Club</a></li>
 <li><a href="servicios.html">Programas</a></li>
 <li><a href="instructores.html">Equipo</a></li>
-<li><a href="galeria.html">Galería</a></li>
+<li><a href="galeria.html">Galeria</a></li>
 <li><a href="planes.html">Planes</a></li>
 <li><a href="eventos.html">Eventos</a></li>
 <li><a href="formularios/formulario.html">Contacto</a></li>
@@ -67,7 +76,7 @@
 <!-- HERO -->
 <section class="club-hero">
 
-<img src="img/IMG_3234.jpg" alt="Be Club atletas">
+<img src="img/track-and-field-5981702_1280.jpg" alt="Pista de atletismo de Be Club">
 
 <div class="club-hero-content container">
 
@@ -357,5 +366,8 @@ navbar.classList.toggle("scrolled", window.scrollY > 20);
 </script>
 
 
+<script src="navbar-mobile.js"></script>
+
 </body>
 </html>
+

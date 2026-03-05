@@ -1,6 +1,6 @@
 .club-hero {
     position: relative;
-    margin-top: 92px;
+    margin-top: 0;
     min-height: 72vh;
     overflow: hidden;
 }
@@ -80,6 +80,28 @@
     margin-bottom: 0.5rem;
 }
 
+.club-card p {
+    margin-bottom: 0.85rem;
+    line-height: 1.65;
+    color: #334045;
+}
+
+.club-card p:last-child {
+    margin-bottom: 0;
+}
+
+.club-card .btn-main {
+    margin-top: 0.25rem;
+}
+
+.section-header {
+    margin-bottom: 1.5rem;
+}
+
+.section-header h2 {
+    line-height: 1.05;
+}
+
 .impact-card ul,
 .values-list,
 .activities-list {
@@ -111,35 +133,46 @@
     .club-block {
         padding: 3.2rem 0;
     }
+
+    .section-header h2 {
+        font-size: clamp(1.7rem, 5vw, 2.25rem);
+    }
+
+    .club-card h3 {
+        font-size: 1.4rem;
+    }
+
+    .club-card p,
+    .impact-card li,
+    .values-list li,
+    .activities-list li {
+        font-size: 0.96rem;
+    }
+
+    .site-footer h5 {
+        font-size: 1.45rem;
+    }
 }
 
 @media (max-width: 767.98px) {
-    .navbar {
-        padding: 0.55rem 0.65rem;
+    body {
+        overflow-x: hidden;
     }
 
-    .menu ul {
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .btn-main {
         width: 100%;
-        flex-wrap: nowrap;
-        justify-content: flex-start;
-        overflow-x: auto;
-        padding: 0 0 0.35rem;
-        gap: 0.45rem;
-        scrollbar-width: thin;
-    }
-
-    .menu ul::-webkit-scrollbar {
-        height: 5px;
-    }
-
-    .menu a {
-        white-space: nowrap;
-        font-size: 0.66rem;
-        padding: 0.4rem 0.6rem;
+        justify-content: center;
+        padding: 0.66rem 0.95rem;
+        font-size: 0.9rem;
     }
 
     .club-hero {
-        margin-top: 116px;
+        margin-top: 0;
         min-height: 470px;
     }
 
@@ -150,6 +183,11 @@
 
     .club-hero-content {
         padding-bottom: 1.4rem;
+    }
+
+    .club-kicker {
+        font-size: 0.7rem;
+        letter-spacing: 0.11em;
     }
 
     .club-hero h1 {
@@ -165,7 +203,101 @@
         padding: 2.6rem 0;
     }
 
+    .section-header {
+        margin-bottom: 1rem;
+    }
+
+    .section-header .section-tag {
+        font-size: 0.72rem;
+        letter-spacing: 0.09em;
+    }
+
+    .section-header h2 {
+        font-size: clamp(1.5rem, 9vw, 2rem);
+    }
+
     .club-card {
         padding: 1rem;
+        border-radius: 12px;
+    }
+
+    .club-card h3 {
+        font-size: 1.28rem;
+    }
+
+    .club-card p,
+    .impact-card li,
+    .values-list li,
+    .activities-list li {
+        font-size: 0.93rem;
+        line-height: 1.55;
+    }
+
+    .club-card img {
+        border-radius: 8px;
+        margin-bottom: 0.65rem;
+    }
+
+    .impact-card ul,
+    .values-list,
+    .activities-list {
+        padding-left: 1rem;
+    }
+
+    .site-footer {
+        text-align: center;
+    }
+
+    .site-footer .row {
+        gap: 1rem;
+    }
+
+    .social-list li {
+        margin-bottom: 0.4rem;
+    }
+
+    .map-frame {
+        margin-top: 0.65rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding-top: 0.5rem;
+    }
+
+    .logo img {
+        width: 118px;
+    }
+
+    .club-hero {
+        margin-top: 0;
+        min-height: 430px;
+    }
+
+    .club-hero img {
+        height: 430px;
+        min-height: 430px;
+    }
+
+    .club-hero-content {
+        padding-bottom: 1.1rem;
+    }
+
+    .club-hero h1 {
+        margin-bottom: 0.2rem;
+    }
+
+    .club-lead {
+        font-size: 0.9rem;
+        margin-bottom: 0.85rem;
+    }
+
+    .club-block {
+        padding: 2.2rem 0;
+    }
+
+    .club-card {
+        padding: 0.9rem;
     }
 }

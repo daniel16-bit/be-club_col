@@ -51,9 +51,56 @@ footer {
     transition: background-color 0.25s ease, box-shadow 0.25s ease;
 }
 
+.nav-top {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
 .navbar.scrolled {
     background: rgba(8, 20, 14, 0.97);
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+.menu-toggle {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 4px;
+    width: 42px;
+    height: 42px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 10px;
+    background: rgba(5, 20, 12, 0.72);
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0;
+}
+
+.menu-toggle span {
+    width: 18px;
+    height: 2px;
+    border-radius: 4px;
+    background: #ffffff;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.navbar.menu-open .menu-toggle span:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+}
+
+.navbar.menu-open .menu-toggle span:nth-child(2) {
+    opacity: 0;
+}
+
+.navbar.menu-open .menu-toggle span:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
 }
 
 .logo img {
@@ -88,8 +135,80 @@ footer {
     color: #03120b;
 }
 
+@media (min-width: 992px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 0.6rem;
+        padding: 0.85rem 1rem;
+    }
+
+    .nav-top {
+        width: 100%;
+        min-height: 0;
+        position: relative;
+        justify-content: center;
+    }
+
+    .logo {
+        margin: 0 auto;
+    }
+
+    .menu-toggle {
+        display: none !important;
+    }
+
+    .menu {
+        width: auto;
+        max-height: none !important;
+        opacity: 1 !important;
+        overflow: visible !important;
+        transform: none !important;
+        pointer-events: auto !important;
+        border: 0 !important;
+        border-radius: 0 !important;
+        background: transparent !important;
+        padding: 0 !important;
+        margin-top: 0 !important;
+    }
+
+    .menu ul {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        overflow: visible !important;
+        gap: 0.6rem;
+        margin: 0;
+        padding: 0;
+    }
+
+    .menu ul li {
+        width: auto;
+        flex: 0 0 auto;
+    }
+
+    .menu a {
+        display: inline-flex;
+        white-space: nowrap;
+        text-align: center;
+        font-size: 0.78rem !important;
+        padding: 0.55rem 0.8rem !important;
+    }
+
+    .hero-section > .container.text-center {
+        padding-top: 13.2rem !important;
+        padding-bottom: 1.4rem;
+    }
+
+    .hero-section h1[style*="margin-top"] {
+        margin-top: 0.35rem !important;
+    }
+}
+
 .hero-section {
-    margin-top: 92px;
+    margin-top: 0;
 }
 
 .carousel-item {
@@ -469,7 +588,7 @@ footer {
 
 @media (max-width: 767.98px) {
     .hero-section {
-        margin-top: 110px;
+        margin-top: 0;
     }
 
     .carousel-item,
@@ -788,5 +907,299 @@ transform: translateY(0);
 
 }
 
+}
+
+/* ============================= */
+/* RESPONSIVE GLOBAL PROYECTO   */
+/* ============================= */
+
+@media (max-width: 991.98px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .navbar {
+        align-items: stretch;
+        padding: 0.55rem 0.7rem !important;
+        gap: 0.35rem;
+    }
+
+    .nav-top {
+        justify-content: center;
+        position: relative;
+        min-height: 56px;
+    }
+
+    .logo img {
+        width: 120px !important;
+    }
+
+    .logo {
+        margin: 0 auto;
+    }
+
+    .menu-toggle {
+        display: inline-flex;
+        right: 0.15rem;
+    }
+
+    .menu {
+        width: 100%;
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transform: translateY(-8px);
+        transition: max-height 0.28s ease, opacity 0.22s ease, transform 0.28s ease, padding 0.2s ease, border-color 0.2s ease;
+        pointer-events: none;
+        border: 0 solid rgba(255, 255, 255, 0.2);
+        border-radius: 12px;
+        padding: 0;
+    }
+
+    .navbar.menu-open .menu {
+        width: 100%;
+        max-height: 80vh;
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+        border-width: 1px;
+        background: rgba(5, 17, 11, 0.96);
+        padding: 0.32rem;
+        margin-top: 0.1rem;
+    }
+
+    .menu ul {
+        width: 100%;
+        display: flex !important;
+        flex-direction: column !important;
+        flex-wrap: nowrap !important;
+        justify-content: flex-start !important;
+        overflow: visible !important;
+        gap: 0.22rem;
+        padding: 0;
+        margin: 0;
+    }
+
+    .menu ul li {
+        width: 100%;
+        flex: 0 0 auto;
+    }
+
+    .menu a {
+        display: block;
+        width: 100%;
+        white-space: normal;
+        text-align: left;
+        font-size: 0.84rem !important;
+        padding: 0.66rem 0.78rem !important;
+        border-radius: 9px;
+        letter-spacing: 0.04em;
+    }
+
+    .menu a:hover,
+    .menu a:focus-visible {
+        background: rgba(0, 185, 107, 0.92);
+        color: #032013;
+    }
+
+    .hero-section {
+        min-height: auto !important;
+        height: auto !important;
+    }
+
+    .hero-section > .container.text-center {
+        padding-top: 10.2rem;
+        padding-bottom: 1.2rem;
+    }
+
+    .hero-section h1[style*="margin-top"] {
+        margin-top: 0 !important;
+    }
+
+    .hero-section h1 {
+        font-size: clamp(1.8rem, 9vw, 2.5rem);
+        line-height: 1.14;
+    }
+
+    .hero-section p {
+        font-size: 0.95rem;
+    }
+
+    .carousel-item {
+        height: 72vh !important;
+        min-height: 430px !important;
+        max-height: none !important;
+    }
+
+    .carousel-item img {
+        height: 100% !important;
+        min-height: 430px !important;
+        object-fit: cover;
+    }
+
+    .carousel-caption {
+        bottom: 1.2rem !important;
+        left: 0.75rem;
+        right: 0.75rem;
+    }
+
+    .carousel-item::before {
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.06) 0%, rgba(0, 0, 0, 0.32) 100%) !important;
+    }
+
+    .carousel-item::after {
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.03) 0%, rgba(0, 0, 0, 0.22) 55%, rgba(0, 0, 0, 0.30) 100%) !important;
+    }
+
+    .caption-box {
+        max-width: 100% !important;
+        padding: 0.85rem 0.95rem !important;
+    }
+
+    .caption-box h1,
+    .caption-box h2 {
+        font-size: clamp(1.7rem, 8.6vw, 2.6rem) !important;
+        letter-spacing: 0.04em !important;
+        margin-bottom: 0.25rem;
+    }
+
+    .caption-box p {
+        font-size: 0.92rem !important;
+        margin-bottom: 0.7rem !important;
+    }
+
+    .btn-main {
+        width: 100%;
+        justify-content: center;
+        font-size: 0.92rem !important;
+        padding: 0.64rem 0.95rem !important;
+    }
+
+    .cta-strip {
+        padding: 2rem 1rem !important;
+    }
+
+    .cta-content {
+        justify-content: center !important;
+        text-align: center;
+        gap: 0.9rem;
+    }
+
+    .cta-strip h2,
+    .cta-content h2 {
+        text-align: center;
+        font-size: clamp(1.25rem, 6.8vw, 1.9rem) !important;
+    }
+
+    .section-block,
+    .club-block {
+        padding: 2.5rem 0 !important;
+    }
+
+    .section-header {
+        margin-bottom: 1rem;
+    }
+
+    .section-header h2 {
+        font-size: clamp(1.5rem, 8vw, 2rem) !important;
+    }
+
+    .section-tag {
+        font-size: 0.72rem !important;
+    }
+
+    .feature-card,
+    .coach-card,
+    .store-card,
+    .event-card,
+    .club-card {
+        padding: 1rem !important;
+        border-radius: 12px;
+    }
+
+    .feature-card h3,
+    .coach-card h3,
+    .store-card h3,
+    .event-card h3,
+    .club-card h3 {
+        font-size: 1.25rem !important;
+    }
+
+    .feature-card p,
+    .coach-card p,
+    .store-card p,
+    .event-card p,
+    .club-card p,
+    .event-date,
+    .plan-features li,
+    .values-list li,
+    .activities-list li,
+    .impact-card li {
+        font-size: 0.93rem !important;
+    }
+
+    .plan-highlight {
+        transform: none !important;
+    }
+
+    .plan-price {
+        font-size: 1.45rem !important;
+        margin: 0.65rem 0 !important;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr !important;
+        gap: 0.8rem !important;
+    }
+
+    .gallery-item img {
+        height: 220px !important;
+    }
+
+    .site-footer {
+        text-align: center;
+        padding-top: 1.3rem !important;
+        padding-bottom: 1.3rem !important;
+    }
+
+    .site-footer .row {
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .container {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+
+    .hero-section > .container.text-center {
+        padding-top: 9.2rem;
+        padding-bottom: 1rem;
+    }
+
+    .hero-section h1 {
+        font-size: clamp(1.6rem, 10vw, 2.15rem) !important;
+        line-height: 1.15;
+    }
+
+    .hero-section p {
+        font-size: 0.9rem !important;
+    }
+
+    .carousel-item {
+        height: 66vh !important;
+        min-height: 390px !important;
+    }
+
+    .carousel-item img {
+        min-height: 390px !important;
+    }
+
+    .club-hero,
+    .club-hero img {
+        min-height: 390px !important;
+        height: 390px !important;
+    }
 }
 
