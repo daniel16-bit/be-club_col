@@ -19,7 +19,7 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-<link rel="stylesheet" href="style1.css">
+<link rel="stylesheet" href="style1.css?v=20260304">
 <link rel="stylesheet" href="elite.css">
 <link rel="stylesheet" href="ultra-elite.css">
 
@@ -141,16 +141,23 @@ transform:translateY(0);
 <body>
 
 <header class="navbar">
-    <div class="logo">
-        <a href="index.html"><img src="img/Logo_Final_BeClub-03.png" alt="Be Club"></a>
+    <div class="nav-top">
+        <div class="logo">
+            <a href="index.html"><img src="img/Logo_Final_BeClub-03.png" alt="Be Club"></a>
+        </div>
+        <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="site-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </div>
-    <nav class="menu">
+    <nav class="menu" id="site-menu">
         <ul>
             <li><a href="index.html">Inicio</a></li>
             <li><a href="info_club.html">El Club</a></li>
-            <li><a href="servicios.html">Programas</a></li> 
+            <li><a href="servicios.html">Programas</a></li>
             <li><a href="instructores.html">Equipo</a></li>
-            <li><a href="galeria.html">Galería</a></li>
+            <li><a href="galeria.html">Galeria</a></li>
             <li><a href="planes.html">Planes</a></li>
             <li><a href="eventos.html">Eventos</a></li>
             <li><a href="formularios/formulario.html">Contacto</a></li>
@@ -334,5 +341,8 @@ section.classList.add("active");
 
 </script>
 
+<script src="navbar-mobile.js?v=20260304"></script>
+
 </body>
 </html>
+
