@@ -16,6 +16,185 @@
 
 <link rel="stylesheet" href="style1.css">
 
+<style>
+.program-flyer-section {
+    background: #ffffff;
+}
+
+.program-sheet {
+    background: linear-gradient(180deg, #07120e 0%, #0b1f16 100%);
+    color: #f3f6f4;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 16px;
+    padding: 1.1rem;
+    height: 100%;
+}
+
+.program-sheet p {
+    margin-bottom: 0.8rem;
+}
+
+.coach-chip {
+    display: inline-block;
+    background: #f1c40f;
+    color: #101315;
+    font-weight: 800;
+    font-size: 1.45rem;
+    line-height: 1;
+    padding: 0.6rem 1rem;
+    border-radius: 10px;
+    margin-bottom: 0.9rem;
+}
+
+.program-pillars {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.6rem;
+    margin: 1rem 0;
+}
+
+.program-pillar {
+    border: 1px solid rgba(241, 196, 15, 0.85);
+    border-radius: 12px;
+    padding: 0.75rem;
+    background: rgba(6, 14, 10, 0.55);
+}
+
+.program-pillar i {
+    color: #f1c40f;
+    margin-bottom: 0.35rem;
+}
+
+.program-pillar h4 {
+    margin: 0 0 0.2rem;
+    font-size: 1rem;
+    color: #f1c40f;
+}
+
+.program-pillar p {
+    margin: 0;
+    font-size: 0.86rem;
+    color: #d9e3dd;
+}
+
+.benefit-strip {
+    display: flex;
+    gap: 0.65rem;
+    align-items: flex-start;
+    background: #f1c40f;
+    color: #111111;
+    border-radius: 10px;
+    padding: 0.75rem 0.8rem;
+    margin-top: 0.65rem;
+}
+
+.benefit-strip i {
+    margin-top: 0.2rem;
+}
+
+.benefit-strip p {
+    margin: 0;
+    font-weight: 600;
+}
+
+.training-place {
+    border: 1px solid rgba(241, 196, 15, 0.8);
+    border-radius: 12px;
+    padding: 0.8rem;
+    margin-top: 0.9rem;
+}
+
+.training-place h4 {
+    color: #f1c40f;
+    margin: 0 0 0.55rem;
+}
+
+.schedule-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.6rem;
+}
+
+.schedule-day {
+    background: rgba(6, 14, 10, 0.55);
+    border-radius: 10px;
+    padding: 0.65rem;
+}
+
+.schedule-day h5 {
+    margin: 0 0 0.25rem;
+    color: #f1c40f;
+    font-size: 0.95rem;
+}
+
+.schedule-day p {
+    margin: 0;
+    font-size: 0.82rem;
+    color: #d9e3dd;
+}
+
+.program-badge {
+    margin-top: 1rem;
+    border: 1px solid rgba(241, 196, 15, 0.8);
+    border-radius: 12px;
+    padding: 0.8rem;
+    background: rgba(6, 14, 10, 0.55);
+}
+
+.program-badge h4 {
+    margin: 0 0 0.35rem;
+    color: #ffffff;
+}
+
+.pricing-preview {
+    margin-top: 1.2rem;
+    border-radius: 16px;
+    background: #07120e;
+    color: #eef4ef;
+    border: 1px solid rgba(241, 196, 15, 0.85);
+    padding: 1rem;
+}
+
+.pricing-preview h3 {
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+    color: #f1c40f;
+}
+
+.price-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.7rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 0.55rem 0;
+    font-weight: 700;
+}
+
+.price-row:last-of-type {
+    border-bottom: 0;
+}
+
+.price-row strong {
+    color: #ffffff;
+}
+
+.pricing-notes {
+    margin-top: 0.7rem;
+    font-size: 0.9rem;
+    color: #d8e3dc;
+}
+
+@media (max-width: 991.98px) {
+    .program-pillars {
+        grid-template-columns: 1fr;
+    }
+
+    .schedule-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+
 </head>
 
 
@@ -249,6 +428,150 @@ Solicitar cupo
 </div>
 
 
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- INFORMACION DETALLADA DE FLYERS -->
+<section class="section-block light-section program-flyer-section">
+
+<div class="container">
+
+<div class="section-header">
+
+<p class="section-tag">Información detallada</p>
+
+<h2>Información de los programas</h2>
+
+</div>
+
+<div class="row g-4">
+
+<div class="col-lg-6">
+
+<article class="program-sheet">
+<h2>Ciclismo de Ruta</h2>
+<p>
+Be Club ofrece un proceso de ciclismo con entrenamientos 100% personalizados mediante TrainingPeaks, guiado por entrenadores y atletas de alto rendimiento.
+</p>
+
+<div class="program-pillars">
+
+<div class="program-pillar">
+<i class="fa-solid fa-person-biking"></i>
+<h4>Clase</h4>
+<p>Fundamentación y habilidades, una vez al mes.</p>
+</div>
+
+<div class="program-pillar">
+<i class="fa-solid fa-stopwatch"></i>
+<h4>Test</h4>
+<p>Evaluación de desempeño como punto de partida.</p>
+</div>
+
+<div class="program-pillar">
+<i class="fa-solid fa-dumbbell"></i>
+<h4>Fuerza</h4>
+<p>Dos sesiones semanales, autónoma o presencial.</p>
+</div>
+
+<div class="program-pillar">
+<i class="fa-solid fa-road"></i>
+<h4>Salida</h4>
+<p>Rodaje con head coach, una vez al mes (domingo).</p>
+</div>
+
+</div>
+
+<div class="benefit-strip">
+<i class="fa-solid fa-screwdriver-wrench"></i>
+<p>Descuento del <strong>20%</strong> en servicio de mecánica para miembros de Be Club.</p>
+</div>
+
+<div class="benefit-strip">
+<i class="fa-solid fa-notes-medical"></i>
+<p>Descuento especial en sesiones de fisioterapia para miembros activos.</p>
+</div>
+
+<div class="program-badge">
+<h4>Programa tu reunión virtual</h4>
+<p>Nuestro head coach te explica el proceso, método de trabajo y resuelve tus dudas.</p>
+</div>
+
+</article>
+
+</div>
+
+<div class="col-lg-6">
+
+<article class="program-sheet">
+<h2>Atletismo Running</h2>
+<p>
+Somos un equipo de deportes cíclicos que te acompaña para comenzar o mejorar de manera consciente con entrenamientos personalizados y seguimiento profesional.
+</p>
+
+<div class="training-place">
+<h4>Entrenamos en</h4>
+<p>Pista de Atletismo El Salitre y Parque Molinos (norte de Bogotá).</p>
+</div>
+
+<div class="schedule-grid">
+
+<div class="schedule-day">
+<h5>Martes</h5>
+<p>5:45 AM - 7:30 AM<br>Pista El Salitre / Parque Molinos.</p>
+</div>
+
+<div class="schedule-day">
+<h5>Viernes</h5>
+<p>5:45 AM - 7:30 AM<br>Pista El Salitre / Parque Molinos.</p>
+</div>
+
+<div class="schedule-day">
+<h5>Sábados</h5>
+<p>8:30 AM - 10:30 AM<br>Fuerza en Gym Zona 4.</p>
+</div>
+
+</div>
+
+<div class="program-badge">
+<h4>Días autónomos</h4>
+<p>Miércoles, jueves y domingos se realizan trabajos autónomos en zonas cercanas al hogar.</p>
+</div>
+
+<div class="program-badge">
+<h4>Programa tu clase de cortesía</h4>
+<p>Disponible los martes en jornada de la mañana, con acompañamiento del equipo técnico.</p>
+</div>
+
+</article>
+
+</div>
+
+</div>
+
+<div class="pricing-preview">
+
+<h3>Planes mensuales de referencia</h3>
+
+<div class="price-row">
+<span>Plan Presencial</span>
+<strong>$235.000</strong>
+</div>
+
+<div class="price-row">
+<span>Plan a Distancia</span>
+<strong>$195.000</strong>
+</div>
+
+<p class="pricing-notes">
+Edad mínima: 16 años. Edad máxima según programa: 45 a 50 años. Requisitos sugeridos: bicicleta de ruta, casco, zapatillas con clips o tenis adecuados, uniforme deportivo, guantes y gafas.
+</p>
 
 </div>
 
